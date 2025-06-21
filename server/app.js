@@ -13,21 +13,9 @@ const PORT = process.env.PORT || 5000;
 // Connect Database
 connectDB();
 
-// 🔧 CORS Configuration
-const allowedOrigins = [
-  "https://multi-step-user-profile-update-form-omega.vercel.app",
-  "http://localhost:5173",
-];
-
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, ""))) {
-        callback(null, true);
-      } else {
-        callback(new Error("CORS not allowed for this origin: " + origin));
-      }
-    },
+    origin: "https://multi-step-user-profile-update-form-omega.vercel.app",
     credentials: true,
   })
 );
