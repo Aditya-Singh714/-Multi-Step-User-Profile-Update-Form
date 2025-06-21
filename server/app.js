@@ -10,20 +10,34 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
+// Connect Database
+connectDB();
+
+// 🔧 CORS Configuration
+const allowedOrigins = [
+  "https://multi-step-user-profile-update-form-omega.vercel.app",
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, ""))) {
+        callback(null, true);
+      } else {
+        callback(new Error("CORS not allowed for this origin: " + origin));
+      }
+    },
     credentials: true,
   })
 );
-app.use(express.json());
 
-// Connect Database
-connectDB();
+// Middleware
+app.use(express.json());
 
 // Routes
 app.use("/api", userRoutes);
 app.use("/api", profileRoutes);
 
+// Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
