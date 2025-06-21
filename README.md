@@ -36,12 +36,12 @@ Live Demo:
 ## 🧬 Folder Structure (Frontend)
 
 src/
--│
--├── components/ # UI components
--├── pages/ # Step1.jsx - Step5.jsx
--├── utils/ # Axios instance
--├── assets/ # Icons & images
--└── App.jsx # Root app
+- │
+- ├── components/ # UI components
+- ├── pages/ # Step1.jsx - Step5.jsx
+- ├── utils/ # Axios instance
+- ├── assets/ # Icons & images
+- └── App.jsx # Root app
 
 ---
 
