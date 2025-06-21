@@ -5,7 +5,7 @@ A full-stack, multi-step user profile update form built with **React**, **Node.j
 Live Demo:
 
 - 🔗 Frontend: [https://multi-step-user-profile-update-form-omega.vercel.app](https://multi-step-user-profile-update-form-omega.vercel.app)
-- 🔗 Backend: [https://multi-step-user-profile-update-form-85cj.onrender.com](=https://multi-step-user-profile-update-form-piph.onrender.com)
+- 🔗 Backend: [https://multi-step-user-profile-update-form-85cj.onrender.com](https://multi-step-user-profile-update-form-piph.onrender.com)
 
 ---
 
@@ -43,10 +43,6 @@ src/
 ├── assets/ # Icons & images
 └── App.jsx # Root app
 
-yaml
-Copy
-Edit
-
 ---
 
 
@@ -64,29 +60,28 @@ Edit
 
 ### Frontend
 
-```bash
 cd frontend
 npm install
 npm run dev
-Backend
-bash
-Copy
-Edit
+
+## Backend
+
 cd backend
 npm install
 npm run dev
-📦 Deployment
+
+### 📦 Deployment
 Frontend: Deployed on Vercel
 
 Backend: Deployed on Render
 
-Make sure to:
+### Make sure to:
 
 Whitelist your current IP in MongoDB Atlas
 
 Allow CORS for your frontend domain in Express config
 
-🧑‍💻 Author
+### 🧑‍💻 Author
 Made with ❤️ by Aditya Singh
 
 ```
